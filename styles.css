@@ -1,0 +1,83 @@
+:root {
+    --column-number: 16;
+}
+@keyframes shake {
+    10% {
+        transform: rotate(10deg);
+    }
+    /*25% {
+        transform: rotate(-10deg);
+    }*/
+    50% {
+        transform: rotate(-10deg);
+    }
+    /*75% {
+        transform: rotate(-10deg);
+    }*/
+    85% {
+        transform: rotate(10deg);
+    }
+}
+.shake-etch {
+    animation-name: shake;
+    animation-duration: 0.5s;
+    animation-delay: 0.2s;
+    animation-timing-function: ease-in;
+}
+.etch-a-sketch {
+    padding: 10px;
+    background-color: tomato;
+    width: 560px;
+    margin: 0 auto;
+    border-radius: 10px;
+    padding-bottom: 120px;
+    position: relative;
+    box-shadow: rgba(0, 0, 0, 0.5) 0px 3px 9px;
+}
+h1 {
+    font-family: 'Berkshire Swash';
+    color: white;
+}
+.grid-wrapper {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 500px;
+    height: 500px;
+    overflow: hidden;
+    outline: 1px solid rgb(163, 163, 163);
+    margin: 0 auto;
+}
+.flex-item {
+    background: rgb(219, 219, 219);
+    width: var(--column-number);
+    height: var(--column-number);
+    flex: 1 1 auto;
+    outline: 1px solid rgb(163, 163, 163);
+
+}
+.permahover {
+    background-color: rgb(100, 100, 100);
+}
+.button {
+    border-radius: 100%;
+    width: 80px;
+    background-color: #fff;
+    position: absolute;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    bottom: 15px;
+    cursor: pointer;
+    font-family: "Raleway";
+    box-shadow: rgba(0, 0, 0, 0.7) 0px 2px 3px;
+}
+.button:hover {
+    box-shadow: rgba(0, 0, 0, 0.7) 0px 1px 2px;
+}
+.change-grid {
+    left: 40px;
+}
+.clear-grid {
+    right: 40px;
+}
