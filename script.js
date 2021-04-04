@@ -27,7 +27,7 @@ function changeColor(e) {
 
 function changeGridNum() {
     let num = prompt("Please enter a number between 1 and 100");
-    if (isNaN(num)) {
+    if (isNaN(num) || num < 1) {
         return changeGridNum()
     }
     divWidth = 500 / num;
